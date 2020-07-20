@@ -1,8 +1,7 @@
-require_relative "./desserts.rb"
-# require_relative "./bakery.rb"
+
 require "pry"
 
-class Ingredients
+class Ingredient
 
     attr_accessor :name, :calories
     @@all = []
