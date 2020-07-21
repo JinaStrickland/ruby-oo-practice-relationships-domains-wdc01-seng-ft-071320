@@ -29,7 +29,6 @@ puts cake.ingredient.include?(flour)
 
 puts corner_bakery.menu
 puts corner_bakery.desserts
-# puts cake.ingredients #put out flour and milk
 puts cake.bakery
 
 Pry.start

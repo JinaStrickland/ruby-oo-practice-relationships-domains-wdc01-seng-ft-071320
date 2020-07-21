@@ -18,13 +18,15 @@ class Bakery
 
     def ingredients
         #all of the ingredients for desserts bakery has
-        DessertIngre.all.select {|ingredient| ingredient.dessert == self}
+        DessertIngre.all.select {
+            |ingredient| ingredient.dessert == self}
         
     end
 
     def desserts
         #get all the desserts that this bakery has
-        Dessert.all_desserts.find_all {|dessert| dessert.bakery == self}
+        Dessert.all_desserts.find_all {
+            |dessert| dessert.bakery == self}
     end
 
     # def average_calories

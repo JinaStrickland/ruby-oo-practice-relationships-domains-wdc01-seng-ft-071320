@@ -1,5 +1,3 @@
-
-
 class Dessert
 
     attr_accessor :dessert_name, :bakery
@@ -20,9 +18,21 @@ class Dessert
     end
 
     def ingredients
-        x = DessertIngre.all.find_all {|element| element.dessert == self}
+        x = DessertIngre.all.find_all {
+            |element| element.dessert == self}
             x.map {|dessert_ingre| dessert_ingre.ingredient}
     end
+
+    def calories
+        dessert = DessertIngre.all.select {
+            |dessert| dessert.dessert == self}
+            des_ingre = dessert.map {|ingre| ingre.ingredient}
+                # des_ingre[1].calories
+                # des_ingre.ingredients
+
+    end
+
+    
 
 end
 

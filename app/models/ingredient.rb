@@ -1,6 +1,3 @@
-
-
-
 class Ingredient
 
     attr_accessor :name, :calories

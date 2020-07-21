@@ -24,4 +24,6 @@ cake1.add_ingredient(sugar)
 # milk.for_dessert(pie)
 # pp DessertIngre.all
 
-pp cake1.ingredients
+# pp cake1.ingredients
+# pp cake1.bakery
+puts cake1.calories
