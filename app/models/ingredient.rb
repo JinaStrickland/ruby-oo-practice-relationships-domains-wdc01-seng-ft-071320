@@ -1,5 +1,5 @@
 
-require "pry"
+
 
 class Ingredient
 
@@ -15,6 +15,9 @@ class Ingredient
         @@all
     end
 
+    def for_dessert(dessert)
+        DessertIngre.new(dessert, self)
+    end
 
 
 end

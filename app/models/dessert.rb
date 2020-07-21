@@ -1,5 +1,4 @@
 
-require "pry"
 
 class Dessert
 
@@ -16,8 +15,15 @@ class Dessert
         @@all_desserts
     end
 
-    
+    def add_ingredient(ingredient)
+        DessertIngre.new(self, ingredient)
+    end
+
+    def ingredients
+        x = DessertIngre.all.find_all {|element| element.dessert == self}
+            x.map {|dessert_ingre| dessert_ingre.ingredient}
+    end
 
 end
 
-#chocolate_cake = Desserts.new("Chocolate Cake") = Cafe has this Desserts
+
