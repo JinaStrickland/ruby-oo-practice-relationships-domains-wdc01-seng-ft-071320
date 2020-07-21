@@ -23,7 +23,7 @@ class Bakery
         
     end
 
-    def desserts
+    def desserts  #works
         #get all the desserts that this bakery has
         Dessert.all_desserts.find_all {
             |dessert| dessert.bakery == self}

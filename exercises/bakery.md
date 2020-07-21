@@ -16,7 +16,7 @@ Create the necessary methods to connect these classes.
 
 #### Bakery
 
-- #ingredients
+- #ingredients  
   - should return an array of ingredients for the bakery's desserts
 <!-- - #desserts
   - should return an array of desserts the bakery makes
@@ -31,12 +31,12 @@ Create the necessary methods to connect these classes.
 
 <!-- - #ingredients
   - should return an array of ingredients for the dessert -->
-- #bakery
+- #bakery  <==========  attr_accessor?
   - should return the bakery object for the dessert
-- #calories
+<!-- - #calories  
   - should return a number totaling all the calories for all the ingredients included in that dessert
-- .all
-  - should return an array of all desserts
+- .all -->
+  <!-- - should return an array of all desserts -->
 
 #### Ingredients
 

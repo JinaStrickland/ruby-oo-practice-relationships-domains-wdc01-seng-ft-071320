@@ -16,8 +16,11 @@ class Ingredient
         DessertIngre.new(dessert, self)
     end
 
+    def desserts
+        Dessert.all_desserts.select do |dessert|
+        dessert.ingredients.include?(self)
+        end
+    end
 
 end
 
-# flour = Ingredients.new("flour", 100)
-# chocolate cake's ingredeints here.....this belong to dessert class

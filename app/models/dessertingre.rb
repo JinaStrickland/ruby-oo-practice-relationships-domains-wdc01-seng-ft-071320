@@ -1,7 +1,7 @@
 class DessertIngre
     #has all the desserts and all the ingredients to make the desserts.
     
-    attr_accessor :dessert, :ingredient
+    attr_reader :dessert, :ingredient
 
     @@all = []
 
