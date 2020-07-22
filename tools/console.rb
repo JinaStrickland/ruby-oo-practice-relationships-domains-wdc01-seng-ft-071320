@@ -4,59 +4,31 @@ def reload
   load 'config/environment.rb'
 end
 
-# corner_bakery = Bakery.new("Corner Bakery")
+jina = Guest.new("Jina")
+tim = Guest.new("Tim")
+susan = Guest.new("Susan")
+andrew = Guest.new("Andrew")
 
-# bakery1 = Bakery.new("Panera")
+new_york = Listing.new("New York")
+seattle = Listing.new("Weattle")
+maimi = Listing.new("Maimi FL")
+chicago = Listing.new("Chicago")
+san_fran = Listing.new("San Fran")
 
-# pie = Dessert.new("pie", bakery1)
+seattle.add_listing(jina)
+tim.add_guest(seattle)
 
-# cookie = Dessert.new("cookie", corner_bakery)
+maimi.add_listing(susan)
 
-# cake = Dessert.new("chocolate cake", bakery1)
+andrew.add_guest(san_fran)
 
-# cake = Dessert.new("chocolate cake", corner_bakery)
+puts "all the listings"
+puts Listing.all
+puts "\n"
 
-# flour = Ingredient.new("flour", 100)
-
-# milk = Ingredient.new("milk", 250)
-
-# join = DessertIngre.new(cake, flour)
-
-# join2 = DessertIngre.new(cake, milk)
-
-# puts cake.ingredient.include?(flour)
-
-
-# puts corner_bakery.menu
-# puts corner_bakery.desserts
-# puts cake.bakery
-
-
-corner_bakery = Bakery.new("Corner Bakery")
-panera = Bakery.new("Panera")
-
-pie = Dessert.new("pie", panera)
-cookie = Dessert.new("cookie", corner_bakery)
-cake1 = Dessert.new("chocolate cake", panera)
-cake2 = Dessert.new("chocolate cake", corner_bakery)
-
-flour = Ingredient.new("flour", 100)
-milk = Ingredient.new("milk", 250)
-sugar = Ingredient.new("sugar", 50)
-
-# print corner_bakery.desserts
-cake1.add_ingredient(flour)
-cake1.add_ingredient(milk)
-cake1.add_ingredient(sugar)
-
-# milk.for_dessert(pie)
-# pp DessertIngre.all
-
-# pp cake1.ingredients
-# pp cake1.bakery
-# puts cake1.calories
+puts "all the guests"
+puts Guest.all
 
 
 Pry.start
-
-
+0
