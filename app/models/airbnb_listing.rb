@@ -1,3 +1,5 @@
+require "pry"
+
 class Listing
 
     attr_accessor :city
@@ -5,14 +7,22 @@ class Listing
 
     def initialize(city)
         @city = city
+        @@all << self
     end
 
     def self.all
-        @all
+        @@all
     end
 
     def add_listing(guest)
         Trip.new(self, guest)
+    end
+
+    def guests
+        Trip.all.map do |listings|
+            listings.listing == self
+        end
+        listing.guest
     end
 
     # def trip_count

@@ -10,7 +10,7 @@ susan = Guest.new("Susan")
 andrew = Guest.new("Andrew")
 
 new_york = Listing.new("New York")
-seattle = Listing.new("Weattle")
+seattle = Listing.new("Seattle")
 maimi = Listing.new("Maimi FL")
 chicago = Listing.new("Chicago")
 san_fran = Listing.new("San Fran")
@@ -22,12 +22,15 @@ maimi.add_listing(susan)
 
 andrew.add_guest(san_fran)
 
-puts "all the listings"
-puts Listing.all
-puts "\n"
 
-puts "all the guests"
-puts Guest.all
+# puts "all the listings"
+# puts Listing.all
+# puts "\n"
+
+# puts "all the guests"
+# puts Guest.all
+
+puts seattle.guests
 
 
 Pry.start

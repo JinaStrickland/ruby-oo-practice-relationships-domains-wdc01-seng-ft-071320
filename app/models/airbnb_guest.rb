@@ -1,15 +1,15 @@
 class Guest
 
-    attr_reader :guest
+    attr_reader :name
     @@all = []
 
-    def initialize(guest)
-        @guest = guest 
+    def initialize(name)
+        @name = name 
         @@all << self
     end
 
     def self.all
-        @all
+        @@all
     end
 
     def add_guest(listing)
@@ -28,7 +28,7 @@ class Guest
 
     # def self.find_all_by_name(name)
 
-    end
+    # end
 
 
 end
