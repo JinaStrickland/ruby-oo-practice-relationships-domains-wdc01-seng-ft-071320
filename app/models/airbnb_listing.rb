@@ -14,20 +14,30 @@ class Listing
         @@all
     end
 
-    def add_listing(guest)
-        Trip.new(self, guest)
-    end
-
-    def guests
+    #returns an array of all
+    #guests who have stayed at a listing
+    def guests 
         Trip.all.map do |listings|
-            listings.listing == self
+        if listings.listing == self
+            listings.guest.name
+            end
         end
-        listing.guest
     end
 
-    # def trip_count
+    #returns an array of all trips at a listing
+    def trips  #<====== QUESTIONS: RETURNS NIL?
+        Trip.all.select do |listings|
+        if listings.listing == self
+            listings
+            end
+        end
+    end
 
-    # end
+    # returns the number of trips that have
+    # been taken to that listing
+    def trip_count
+        self.trips.length
+    end
 
     # def self.find_all_by_city(city)
 

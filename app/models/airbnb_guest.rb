@@ -12,9 +12,6 @@ class Guest
         @@all
     end
 
-    def add_guest(listing)
-        Trip.new(listing, self)
-    end
 
     # def trips
     #     Trip.all.find_all do |my_trips|

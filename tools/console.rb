@@ -8,30 +8,29 @@ jina = Guest.new("Jina")
 tim = Guest.new("Tim")
 susan = Guest.new("Susan")
 andrew = Guest.new("Andrew")
+john = Guest.new("John")
+kate = Guest.new("Kate")
 
 new_york = Listing.new("New York")
 seattle = Listing.new("Seattle")
 maimi = Listing.new("Maimi FL")
-chicago = Listing.new("Chicago")
 san_fran = Listing.new("San Fran")
 
+seattle.add_listing(susan)
 seattle.add_listing(jina)
-tim.add_guest(seattle)
+seattle.add_listing(tim)
 
 maimi.add_listing(susan)
+maimi.add_listing(kate)
 
 andrew.add_guest(san_fran)
+john.add_guest(san_fran)
 
-
-# puts "all the listings"
-# puts Listing.all
-# puts "\n"
-
-# puts "all the guests"
-# puts Guest.all
-
+"Seattle Guests:"
 puts seattle.guests
 
+# "Maimi Guests:"
+# pp maimi.guests
 
 Pry.start
 0
