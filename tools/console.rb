@@ -14,23 +14,21 @@ kate = Guest.new("Kate")
 new_york = Listing.new("New York")
 seattle = Listing.new("Seattle")
 maimi = Listing.new("Maimi FL")
-san_fran = Listing.new("San Fran")
 
-seattle.add_listing(susan)
-seattle.add_listing(jina)
-seattle.add_listing(tim)
+trip1 = Trip.new(seattle, jina)
+trip1 = Trip.new(seattle, tim)
+trip2 = Trip.new(maimi, susan)
+trip3 = Trip.new(maimi, kate)
+trip4 = Trip.new(new_york, john)
 
-maimi.add_listing(susan)
-maimi.add_listing(kate)
-
-andrew.add_guest(san_fran)
-john.add_guest(san_fran)
-
-"Seattle Guests:"
+puts "Seattle Guests:"
 puts seattle.guests
 
-# "Maimi Guests:"
-# pp maimi.guests
+puts "Miami Trips:"
+puts maimi.trips
+
+puts "Seattle Trip Count:"
+puts seattle.trip_count
 
 Pry.start
 0
